@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #69f5fa, #ff7eb3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.container {
+    padding: 30px;
+    width: 100%;
+    max-width: 600px; 
+}
+
+h1 {
+    color: rgb(0, 0, 0);
+    font-size: 2.5rem;
+}
+
+
+.botoes {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 15px 40px;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    min-width: 140px;
+}
+
+#sim {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#nao {
+    background-color: #f44336;
+    color: white;
+}
+
+
+.tela-final {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(135deg, #69f5fa, #ff7eb3);
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    animation: fade 1s ease-in-out;
+}
+
+.tela-final h1 {
+    font-size: 3rem;
+}
+
+.tela-final p {
+    font-size: 1.5rem;
+}
+
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 7vw;
+    }
+
+    button {
+        width: 80%;
+        font-size: 5vw;
+    }
+
+    .botoes {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .tela-final h1 {
+        font-size: 8vw;
+    }
+
+    .tela-final p {
+        font-size: 5vw;
+    }
+}
+.foto-amor {
+    width: 80%;
+    max-width: 350px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+@keyframes aparecer {
+    from { 
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to { 
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.foto-inicio {
+    width: 80%;
+    max-width: 350px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.rodape {
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    color: white;
+    opacity: 0.8;
+    padding: 15px 0;
+}
+.container,
+.tela-final {
+    flex: 1;
+}
