@@ -1,49 +1,66 @@
+/* RESET BÁSICO */
 * {
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
 }
 
+/* BODY PRINCIPAL */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #69f5fa, #ff7eb3);
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    overflow: hidden;
     flex-direction: column;
+    background: linear-gradient(135deg, #00adfd, #ff78dd);
 }
 
+/* CONTEÚDO PRINCIPAL OCUPA O ESPAÇO */
+.container,
+.tela-final {
+    flex: 1;
+}
+
+/* PRIMEIRA TELA */
 .container {
-    padding: 30px;
-    width: 100%;
-    max-width: 600px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
 }
 
 h1 {
-    color: rgb(0, 0, 0);
-    font-size: 2.5rem;
+    color: white;
+    font-size: 2.3rem;
 }
 
+/* IMAGEM INICIAL */
+.foto-inicio {
+    width: 80%;
+    max-width: 320px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
 
+/* BOTÕES */
 .botoes {
-    margin-top: 30px;
+    margin-top: 25px;
     display: flex;
-    justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 button {
-    padding: 15px 40px;
-    font-size: 1.3rem;
+    padding: 15px 35px;
+    font-size: 1.2rem;
     border: none;
     border-radius: 15px;
     cursor: pointer;
     transition: 0.3s ease;
-    min-width: 140px;
+    min-width: 150px;
 }
 
 #sim {
@@ -56,34 +73,54 @@ button {
     color: white;
 }
 
-
+/* TELA FINAL */
 .tela-final {
     display: none;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
-    background: linear-gradient(135deg, #69f5fa, #ff7eb3);
-    color: rgb(0, 0, 0);
-    padding: 20px;
-    animation: fade 1s ease-in-out;
+    justify-content: flex-start;
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #00adfd, #ff78dd);
+    color: white;
+    padding: 40px 20px 60px 20px;
+    text-align: center;
+    overflow-y: auto; /* permite rolagem se o texto for grande */
 }
 
+/* IMAGEM FINAL */
+.foto-amor {
+    width: 80%;
+    max-width: 350px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* TEXTO FINAL */
 .tela-final h1 {
-    font-size: 3rem;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
 }
 
 .tela-final p {
-    font-size: 1.5rem;
+    max-width: 650px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
-@keyframes fade {
-    from {opacity: 0;}
-    to {opacity: 1;}
+/* RODAPÉ */
+.rodape {
+    width: 100%;
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 0.9rem;
+    background: rgba(0,0,0,0.2);
+    color: white;
 }
 
-
+/* RESPONSIVO PARA CELULAR */
 @media (max-width: 600px) {
 
     h1 {
@@ -91,7 +128,7 @@ button {
     }
 
     button {
-        width: 80%;
+        width: 85%;
         font-size: 5vw;
     }
 
@@ -101,47 +138,10 @@ button {
     }
 
     .tela-final h1 {
-        font-size: 8vw;
+        font-size: 7vw;
     }
 
     .tela-final p {
-        font-size: 5vw;
+        font-size: 4.5vw;
     }
-}
-.foto-amor {
-    width: 80%;
-    max-width: 350px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-}
-
-@keyframes aparecer {
-    from { 
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    to { 
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-.foto-inicio {
-    width: 80%;
-    max-width: 350px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-}
-.rodape {
-    width: 100%;
-    text-align: center;
-    font-size: 0.9rem;
-    color: white;
-    opacity: 0.8;
-    padding: 15px 0;
-}
-.container,
-.tela-final {
-    flex: 1;
 }
